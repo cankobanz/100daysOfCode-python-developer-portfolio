@@ -1,94 +1,42 @@
 import random
+from hangman_words import word_list
+from hangman_art import stages, logo
 
-stages = ['''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========
-''']
-
-word_list = ["aardvark", "baboon", "camel"]
+print(logo)
 chosen_word = random.choice(word_list)
 
+# Comment it if you want to real game.
 print(f'Pssst, the solution is {chosen_word}.')
 
 display = []
-for i in range(0, len(chosen_word)):
-    display.append("_")
+for _ in range(len(chosen_word)):
+    display += "_"
 
-won = False
+end_of_game = False
 lives = 6
-while not won and lives != 0:
-    won = True
+while not end_of_game and lives != 0:
     found = False
     guess = input("Guess a letter: ").lower()
+    if guess in display:
+        print("You wrote same letter!")
+        continue
 
+    #Check guessed letter
     for i, letter in enumerate(chosen_word):
         if letter == guess:
             display[i] = letter
-            found = True
-        if '_' in display:
-            won = False
 
-    if not found:
+    #Check if user is wrong.
+    if guess not in chosen_word:
         lives -= 1
-        print(stages[lives])
-    else:
-        print(stages[lives])
+        if lives == 0:
+            end_of_game = True
+            print("You lose.")
 
+    #Check if user has got all letters.
+    if '_' not in display:
+        end_of_game = True
+        print("Congrats! You won!")
+
+    print(stages[lives])
     print(f"{' '.join(display)}")
-
-if won:
-    print("Congrats! You won!")
-if lives == 0:
-    print(":(")
