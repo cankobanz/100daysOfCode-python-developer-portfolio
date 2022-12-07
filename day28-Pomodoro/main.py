@@ -79,10 +79,6 @@ label = Label(text="Timer", font=(FONT_NAME, 45, "bold"), bg=YELLOW, fg=GREEN)
 label.grid(row=0, column=1)
 
 
-def action():
-    print("Do something")
-
-
 button_start = Button(text="start", command=start_timer)
 button_start.grid(row=2, column=0)
 
