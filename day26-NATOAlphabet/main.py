@@ -20,6 +20,7 @@ for (index, row) in student_data_frame.iterrows():
 
 # Keyword Method with iterrows()
 # {new_key:new_value for (index, row) in df.iterrows()}
+# ----------------------------------------------------------------
 
 df = pandas.read_csv("nato_phonetic_alphabet.csv")
 nato_alphabet = {row.letter: row.code for (index, row) in df.iterrows()}
@@ -30,4 +31,10 @@ def to_phonetic_codes(word):
     print(phonetic_codes)
 
 
-to_phonetic_codes(input("Enter a word, please."))
+while True:
+    try:
+        to_phonetic_codes(input("Enter a word, please."))
+    except KeyError:
+        print("Sorry, only letters in  the alphabet please.")
+    else:
+        break
