@@ -17,7 +17,7 @@ scoreboard = Scoreboard()
 screen.listen()
 screen.onkey(snake.up, "w")
 screen.onkey(snake.down, "s")
-screen.onkey(snake.right, "d")
+screen.onkey(snake.right, "hour_data")
 screen.onkey(snake.left, "a")
 
 game_is_on = True
