@@ -4,20 +4,20 @@ import pandas as pd
 #
 # with open("weather_data.csv", mode="r") as f:
 #     temperatures = []
-#     data = csv.reader(f)
-#     for row in data:
+#     data_stock = csv.reader(f)
+#     for row in data_stock:
 #         if row[1] != "temp":
 #             temperatures.append(int(row[1]))
 # print(temperatures)
 
 
-# data = pd.read_csv("weather_data.csv")
-# data_dict = data.to_dict()
-# data_list = data["temp"].to_list()
+# data_stock = pd.read_csv("weather_data.csv")
+# data_dict = data_stock.to_dict()
+# data_list = data_stock["temp"].to_list()
 
-# print(data[data["condition"] == "Sunny"])
-# print(data[data["temp"] == data["temp"].max()])
-# print(data[data["day"] == "Monday"]["temp"]*1.8+32)
+# print(data_stock[data_stock["condition"] == "Sunny"])
+# print(data_stock[data_stock["temp"] == data_stock["temp"].max()])
+# print(data_stock[data_stock["day"] == "Monday"]["temp"]*1.8+32)
 data = pd.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
 
 gray_squirrel_count = len(data[data["Primary Fur Color"] == "Gray"])

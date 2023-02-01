@@ -12,7 +12,7 @@ import pandas
 
 student_data_frame = pandas.DataFrame(student_dict)
 
-# Loop through rows of a data frame
+# Loop through rows of a data_stock frame
 for (index, row) in student_data_frame.iterrows():
     # Access index and row
     # Access row.student or row.score

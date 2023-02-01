@@ -20,4 +20,4 @@ for hour_data in data:
     if condition < 700:
         print("Bring an umbrella!")
 
-# print(data["weather"][0]["id"])
+# print(data_stock["weather"][0]["id"])
