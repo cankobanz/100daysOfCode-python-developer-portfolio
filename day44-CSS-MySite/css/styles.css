@@ -1,0 +1,55 @@
+div {
+    background-color: #FDEEDC;
+}
+body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Mynerve', cursive;
+}
+h1 {
+    font-size: 5.625em;
+    margin-top: 0;
+    color: #183A1D;
+    line-height: 2;
+}
+
+h2 {
+    font-size: 50px;
+    color: #183A1D;
+    font-weight: normal;
+}
+
+h3 {
+    font-size:40px;
+    color: #F0A04B;
+}
+a{
+    color: #11999E;
+    font-size: 1.5em;
+}
+
+p{
+    font-size: 20px;
+}
+
+
+.bottom_cloud {
+    position: absolute;
+}
+
+.top_cloud {
+    position: absolute;
+    right: 450px;
+}
+.skill-row {
+    margin: 100px auto 100px auto;
+    width: 50%;
+    text-align: left;
+    line-height: 2;
+}
+.images {
+    width: 25%;
+    float: left;
+    margin-right: 30px;
+}
+
