@@ -43,7 +43,7 @@ while end_of_game:
         print(f"Current score is: {score}")
     else:
         end_of_game = False
-    # Ask until answer is incorrect.
+    # Ask until event is incorrect.
 
 # Report the score
 print(f"Final score is {score}!")
